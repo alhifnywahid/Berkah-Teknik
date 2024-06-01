@@ -1,6 +1,7 @@
 import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct } from "./utils/Function.js";
 
-const URL = window.location.href;
+const URL = window.location.href; 
+const hash = window.location.hash; 
 
 if (URL.includes("galery")) {
 	/* ~~~~~~~~~~ Get Image for GaleryPage ~~~~~~~~~~ */
@@ -8,7 +9,7 @@ if (URL.includes("galery")) {
 } else if (URL.includes("product")) {
 	/* ~~~~~~~~~~ Get Product Recomendations for ProductPage ~~~~~~~~~~ */
 	getProduct($("#product-recommendations"), 5);
-} else if (URL.includes("index")) {
+} else if (hash.includes("home") || hash.includes("")) {
 	/* ~~~~~~~~~~ Get Data Product for HomePage ~~~~~~~~~~ */
 	getProduct($(".product-content"), showProduct());
 }

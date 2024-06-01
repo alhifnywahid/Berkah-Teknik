@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berkah Teknik</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <!-- ~~~~~~~~~ Loader ~~~~~~~~~~~ -->
+    <div class="bg-loader">
+      <div class="loader"></div>
+    </div>
+    <!-- ~~~~~~~~~ Hader ~~~~~~~~~~~ -->
+    <header>
+      <nav class="sub-container">
+        <div class="content-left">
+          <a class="to-page-home" href="#home">
+            <h1 class="font">LOGO</h1>
+          </a>
+        </div>
+        <div class="content-middle">
+          <ul>
+            <li><a class="to-page-home" href="#home">Home</a></li>
+            <li>
+              <a class="to-page-layanan" href="layanan.html">Layanan</a>
+            </li>
+            <li><a class="to-page-galery" href="galery.html">Galery</a></li>
+            <li>
+              <a class="to-page-kerja-sama" href="kerja-sama.html"
+                >Kerja Sama</a
+              >
+            </li>
+            <li><a class="to-page-kontak" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="content-right">
+          <a class="to-page-profile" href="akun.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.25"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z"></path>
+              <path
+                d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741"
+              ></path>
+              <path
+                d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#theme">
+            <svg
+              data-active-theme="light"
+              xmlns="http://www.w3.org/2000/svg"
+              class=""
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+              ></path>
+              <path d="M6.343 17.657l-1.414 1.414"></path>
+              <path d="M6.343 6.343l-1.414 -1.414"></path>
+              <path d="M17.657 6.343l1.414 -1.414"></path>
+              <path d="M17.657 17.657l1.414 1.414"></path>
+              <path d="M4 12h-2"></path>
+              <path d="M12 4v-2"></path>
+              <path d="M20 12h2"></path>
+              <path d="M12 20v2"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- ~~~~~~~~~ Navigasi Mobile ~~~~~~~~~~~ -->
+    <div class="nav-mobile">
+      <div class="sub-container">
+        <a class="to-page-home" href="#home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M19.072 21h-14.144a1.928 1.928 0 0 1 -1.928 -1.928v-6.857c0 -.512 .203 -1 .566 -1.365l7.07 -7.063a1.928 1.928 0 0 1 2.727 0l7.071 7.063c.363 .362 .566 .853 .566 1.365v6.857a1.928 1.928 0 0 1 -1.928 1.928z"
+            ></path>
+            <path d="M7 13v4h10v-4l-5 -5"></path>
+            <path d="M14.8 5.2l-11.8 11.8"></path>
+            <path d="M7 17v4"></path>
+            <path d="M17 17v4"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <div class="toogle-menu">
+          <label for="menu" class="pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 4h6v6h-6z"></path>
+              <path d="M14 4h6v6h-6z"></path>
+              <path d="M4 14h6v6h-6z"></path>
+              <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            </svg>
+            <span>Menu</span>
+          </label>
+          <input
+            class="toogle-show-menu"
+            type="checkbox"
+            name="menu"
+            id="menu"
+          />
+          <div class="show-menu">
+            <a class="to-page-layanan" href="layanan.html">Layanan</a>
+            <a class="to-page-galery" href="galery.html">Galery</a>
+            <a class="to-page-kerja-sama" href="kerja-sama.html">Kerja Sama</a>
+            <a class="to-page-kontak" href="kontak.html">Kontak</a>
+          </div>
+        </div>
+        <div class="toogle-theme">
+          <label for="theme">
+            <svg
+              data-active-theme="light"
+              xmlns="http://www.w3.org/2000/svg"
+              class=""
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+              ></path>
+              <path d="M6.343 17.657l-1.414 1.414"></path>
+              <path d="M6.343 6.343l-1.414 -1.414"></path>
+              <path d="M17.657 6.343l1.414 -1.414"></path>
+              <path d="M17.657 17.657l1.414 1.414"></path>
+              <path d="M4 12h-2"></path>
+              <path d="M12 4v-2"></path>
+              <path d="M20 12h2"></path>
+              <path d="M12 20v2"></path>
+            </svg>
+            <span>Tema</span>
+          </label>
+        </div>
+        <a class="to-page-profile" href="akun.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z"></path>
+            <path
+              d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741"
+            ></path>
+            <path
+              d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+            ></path>
+          </svg>
+          <span>Akun</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="page home-page" id="home">
+      <!-- main -->
+      <section class="main">
+        <main class="sub-container">
+          <div class="content-left">
+            <h2>Berkah Teknik</h2>
+            <p>
+              Menyediakan berbagai layanan berkualitas tinggi terkait dengan
+              sistem pendingin udara (AC) Anda.
+            </p>
+            <div class="main-button">
+              <a class="to-page-layanan" href="./pages/layanan.html">
+                <button>Layanan</button>
+              </a>
+              <a class="to-page-kontak" href="#kontak">
+                <button>Hubungi Kami</button>
+              </a>
+            </div>
+          </div>
+          <div class="content-right">
+            <img src="/assets/img/banner-home.png" />
+          </div>
+        </main>
+      </section>
+      <!-- main -->
+
+      <!-- logo brand -->
+      <section class="brand-logo">
+        <div class="sub-container">
+          <p>
+            Temukan berbagai macam Air Conditioner dengan merk terbaik hanya di
+            sini!
+          </p>
+          <ul class="list-brand">
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/2.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/3.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/4.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/5.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/6.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/7.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/8.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/9.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/10.png" />
+            </li>
+            <li class="list-item-brand">
+              <img src="assets/img/logo-brand/11.png" />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- logo brand -->
+
+      <!-- produk -->
+      <section class="product">
+        <div class="sub-container">
+          <div class="filter-content">
+            <div class="customize-filter">
+              <div class="bg-filtering-search">
+                <div class="bg-search">
+                  <label for="search-data">
+                    <svg
+                      data-v-bf85076e=""
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#797F85"
+                      preserveAspectRatio="xMidYMid meet"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="icon-white"
+                    >
+                      <path
+                        d="M20.6423 19.37L17.3301 16.06C18.3808 14.65 19.0112 12.9 19.0112 11.01C19.0112 6.31 15.1987 2.5 10.5056 2.5C5.81251 2.5 2 6.31 2 11C2 15.69 5.81251 19.5 10.5056 19.5C12.4068 19.5 14.148 18.87 15.5589 17.82L18.8711 21.13C19.1113 21.37 19.4315 21.5 19.7517 21.5C20.0719 21.5 20.3921 21.38 20.6323 21.13C21.1226 20.64 21.1226 19.85 20.6323 19.36L20.6423 19.37ZM4.50165 11C4.50165 7.69 7.19342 5 10.5056 5C13.8178 5 16.5095 7.69 16.5095 11C16.5095 14.31 13.8178 17 10.5056 17C7.19342 17 4.50165 14.31 4.50165 11Z"
+                      ></path>
+                    </svg>
+                  </label>
+                  <input
+                    type="text"
+                    id="search-data"
+                    placeholder="Cari Barangmu di sini!"
+                  />
+                </div>
+              </div>
+              <div class="bg-filtering">
+                <div class="bg-filter">
+                  <label class="set-display" for="btn-filter">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#797f85"
+                      preserveAspectRatio="xMidYMid meet"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M9.99902 12.8108V21.2499C9.99902 21.9195 10.809 22.2493 11.279 21.7796V21.7696L13.629 19.4208C13.859 19.1909 13.999 18.8711 13.999 18.5413V12.8109L21.5991 4.51867C22.4791 3.55918 21.8091 2 20.5091 2H3.48907C2.18907 2 1.51907 3.55918 2.39907 4.51867L9.99902 12.8108Z"
+                      ></path>
+                    </svg>
+                    <input
+                      type="checkbox"
+                      style="display: none"
+                      id="btn-filter"
+                    />
+                    Filter
+                  </label>
+                </div>
+                <div class="bg-filter">
+                  <label class="set-display label-compare" for="compare">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#797f85"
+                      preserveAspectRatio="xMidYMid meet"
+                      width="32px"
+                      height="32px"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6.66244 3.28972L2.45244 6.82972L2.44244 6.81972C1.92244 7.25972 1.85244 8.04972 2.29244 8.57972C2.30244 8.59972 2.44244 8.72972 2.44244 8.72972L6.65244 12.2697C7.18244 12.7197 7.97244 12.6497 8.41244 12.1197C8.86244 11.5897 8.79244 10.7997 8.26244 10.3597L6.68244 9.02972H18.7524C19.4424 9.02972 20.0024 8.46972 20.0024 7.77972C20.0024 7.08972 19.4424 6.52972 18.7524 6.52972H6.69244L8.27244 5.19972C8.79244 4.75972 8.86244 3.96972 8.42244 3.43972C7.98244 2.91972 7.19244 2.84972 6.66244 3.28972ZM17.3224 14.9595H5.25239L5.24239 14.9695C4.55239 14.9695 3.99239 15.5295 3.99239 16.2195C3.99239 16.9095 4.55239 17.4695 5.24239 17.4695H17.3124L15.7324 18.7995C15.2124 19.2395 15.1424 20.0295 15.5824 20.5595C16.0224 21.0795 16.8124 21.1495 17.3424 20.7095L21.5524 17.1695L21.7024 17.0195C22.1524 16.4895 22.0824 15.6995 21.5524 15.2595L17.3524 11.7195C16.8224 11.2695 16.0324 11.3395 15.5924 11.8695C15.1424 12.3995 15.2124 13.1895 15.7424 13.6295L17.3224 14.9595Z"
+                      ></path>
+                    </svg>
+                    <input type="checkbox" style="display: none" id="compare" />
+                    Bandingkan
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="background-filter">
+              <div class="container-filter">
+                <div class="header-filter">
+                  <h2>Semua Filter</h2>
+                  <label for="btn-filter">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#797f85"
+                    preserveAspectRatio="xMidYMid meet"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24" 
+                  >
+                    <path 
+                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                    ></path>
+                  </svg>
+                  </label>
+                </div>
+                <div class="list-filter">
+                  <div class="list-type-filter">
+                    <span>Brand</span>
+                    <ul>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-daikin"
+                          type="checkbox"
+                        />
+                        <label for="cx-daikin">Daikin</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-panasonic"
+                          type="checkbox"
+                        />
+                        <label for="cx-panasonic">Panasonic</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-gree"
+                          type="checkbox"
+                        />
+                        <label for="cx-gree">Gree</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-samsung"
+                          type="checkbox"
+                        />
+                        <label for="cx-samsung">Samsung</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input data-cx="cx-filter" id="cx-lg" type="checkbox" />
+                        <label for="cx-lg">LG</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-type-filter">
+                    <span>Kondisi</span>
+                    <ul>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-baru"
+                          type="checkbox"
+                        />
+                        <label for="cx-baru">Baru</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-bekas"
+                          type="checkbox"
+                        />
+                        <label for="cx-bekas">Bekas</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-type-filter">
+                    <span>Barang</span>
+                    <ul>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-unit"
+                          type="checkbox"
+                        />
+                        <label for="cx-unit">Unit</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-akesoris"
+                          type="checkbox"
+                        />
+                        <label for="cx-akesoris">Aksesoris</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-type-filter">
+                    <span>Tampilan Produk</span>
+                    <ul>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-50"
+                          type="radio"
+                          name="show-product"
+                          value="50"
+                          checked
+                        />
+                        <label for="cx-50">50 Produk</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-100"
+                          type="radio"
+                          name="show-product"
+                          value="100"
+                        />
+                        <label for="cx-100">100 Produk</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-200"
+                          type="radio"
+                          name="show-product"
+                          value="200"
+                        />
+                        <label for="cx-200">200 Produk</label>
+                      </li>
+                      <li class="cx-filter">
+                        <input
+                          data-cx="cx-filter"
+                          id="cx-all"
+                          type="radio"
+                          name="show-product"
+                          value="all"
+                        />
+                        <label for="cx-all">Semua Produk</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-filter">
+                  <button data-btn="reset-filter">Reset</button>
+                  <button class="accept-filter">Tampilkan</button>
+                </div>
+              </div>
+            </div>
+            <div class="background-compare">
+              <div class="header-filter">
+                <h2>Bandingkan Produk</h2>
+                <label for="compare">
+                  <svg
+                    data-v-a1fc16c0=""
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#797f85"
+                    preserveAspectRatio="xMidYMid meet"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    class="label-compare"
+                  >
+                    <path
+                      class="label-compare"
+                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                    ></path>
+                  </svg>
+                </label>
+              </div>
+              <p>Pilih maksimum 3 produk untuk di bandingkan</p>
+              <div class="checked-product">
+                <div class="bg-list-img">
+                  <!-- <img
+                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
+                    class="list-product"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="compare-close"
+                  >
+                    <path
+                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                    ></path>
+                  </svg>
+                </div>
+                +
+                <div class="bg-list-img">
+                  <!-- <img
+                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
+                    class="list-product"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="compare-close"
+                  >
+                    <path
+                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                    ></path>
+                  </svg>
+                </div>
+                +
+                <div class="bg-list-img">
+                  <!-- <img
+                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
+                    class="list-product"
+                  /> -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    class="compare-close"
+                  >
+                    <path
+                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <button>Bandingkan</button>
+            </div>
+          </div>
+          <div class="product-content flex-product">
+            <a class="list-product" href="#detail-product">
+              <div class="image-content">
+                <img src="./assets/img/banner-home.png" />
+              </div>
+              <div class="description-product">
+                <span class="product-title">One More Than</span>
+                <div class="deskripsi-label">
+                  <span class="list-label">daikin</span>
+                  <span class="list-label">bekas</span>
+                </div>
+                <span class="price">10000</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- produk -->
+    </div>
+
+    <footer>
+      <div class="sub-container">
+        <div class="footer-top">
+          <div class="caption">
+            <h3>Daftarkan Sekakrang! Untuk Mendapatkan Update Terbaru.</h3>
+          </div>
+          <div class="form-subscribe">
+            <input placeholder="Masukkan email" type="email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="footer-mid">
+          <ul class="footer-nav">
+            <li><a class="to-page-home" href="#home">Home</a></li>
+            <li>
+              <a class="to-page-layanan" href="./pages/layanan.html">Layanan</a>
+            </li>
+            <li><a class="to-page-galery" href="#galery">Galery</a></li>
+            <li>
+              <a class="to-page-kerja-sama" href="#kerja-sama">Kerja Sama</a>
+            </li>
+            <li><a class="to-page-kontak" href="#kontak">Kontak</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#facebook-account"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#twitter-account"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#instagram-account"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#youtube-account"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <span class="footer-dash"></span>
+        <div class="footer-bottom">
+          <div class="copyrigth">
+            <span>© 2024 BerkahTeknik. All rights reserved.</span>
+          </div>
+          <div class="logo">
+            <a class="to-page-home" href="#home">BerkahTeknik</a>
+          </div>
+          <div class="terms-privacy">
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <script type="module" src="/assets/js/script.js"></script>
+    <script type="module" src="/assets/js/final.js"></script>
+  </body>
+</html>

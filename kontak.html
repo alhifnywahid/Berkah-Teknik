@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berkah Teknik</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link rel="stylesheet" href="./../css/responsive.css" />
+  </head>
+  <body>
+    <!-- ~~~~~~~~~ Loader ~~~~~~~~~~~ -->
+    <div class="bg-loader">
+      <div class="loader"></div>
+    </div>
+    <!-- ~~~~~~~~~ Hader ~~~~~~~~~~~ -->
+    <header>
+      <nav class="sub-container">
+        <div class="content-left">
+          <a class="to-page-home" href="index.html#home">
+            <h1 class="font">LOGO</h1>
+          </a>
+        </div>
+        <div class="content-middle">
+          <ul>
+            <li><a class="to-page-home" href="index.html#home">Home</a></li>
+            <li>
+              <a class="to-page-layanan" href="layanan.html">Layanan</a>
+            </li>
+            <li><a class="to-page-galery" href="galery.html">Galery</a></li>
+            <li>
+              <a class="to-page-kerja-sama" href="kerja-sama.html"
+                >Kerja Sama</a
+              >
+            </li>
+            <li><a class="to-page-kontak" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="content-right">
+          <a class="to-page-profile" href="akun.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.25"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z"></path>
+              <path
+                d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741"
+              ></path>
+              <path
+                d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#theme">
+            <svg
+              data-active-theme="light"
+              xmlns="http://www.w3.org/2000/svg"
+              class=""
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+              ></path>
+              <path d="M6.343 17.657l-1.414 1.414"></path>
+              <path d="M6.343 6.343l-1.414 -1.414"></path>
+              <path d="M17.657 6.343l1.414 -1.414"></path>
+              <path d="M17.657 17.657l1.414 1.414"></path>
+              <path d="M4 12h-2"></path>
+              <path d="M12 4v-2"></path>
+              <path d="M20 12h2"></path>
+              <path d="M12 20v2"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- ~~~~~~~~~ Navigasi Mobile ~~~~~~~~~~~ -->
+    <div class="nav-mobile">
+      <div class="sub-container">
+        <a class="to-page-home" href="index.html#home">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M19.072 21h-14.144a1.928 1.928 0 0 1 -1.928 -1.928v-6.857c0 -.512 .203 -1 .566 -1.365l7.07 -7.063a1.928 1.928 0 0 1 2.727 0l7.071 7.063c.363 .362 .566 .853 .566 1.365v6.857a1.928 1.928 0 0 1 -1.928 1.928z"
+            ></path>
+            <path d="M7 13v4h10v-4l-5 -5"></path>
+            <path d="M14.8 5.2l-11.8 11.8"></path>
+            <path d="M7 17v4"></path>
+            <path d="M17 17v4"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <div class="toogle-menu">
+          <label for="menu" class="pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 4h6v6h-6z"></path>
+              <path d="M14 4h6v6h-6z"></path>
+              <path d="M4 14h6v6h-6z"></path>
+              <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            </svg>
+            <span>Menu</span>
+          </label>
+          <input
+            class="toogle-show-menu"
+            type="checkbox"
+            name="menu"
+            id="menu"
+          />
+          <div class="show-menu">
+            <a class="to-page-layanan" href="layanan.html">Layanan</a>
+            <a class="to-page-galery" href="galery.html">Galery</a>
+            <a class="to-page-kerja-sama" href="kerja-sama.html">Kerja Sama</a>
+            <a class="to-page-kontak" href="kontak.html">Kontak</a>
+          </div>
+        </div>
+        <div class="toogle-theme">
+          <label for="theme">
+            <svg
+              data-active-theme="light"
+              xmlns="http://www.w3.org/2000/svg"
+              class=""
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+              ></path>
+              <path d="M6.343 17.657l-1.414 1.414"></path>
+              <path d="M6.343 6.343l-1.414 -1.414"></path>
+              <path d="M17.657 6.343l1.414 -1.414"></path>
+              <path d="M17.657 17.657l1.414 1.414"></path>
+              <path d="M4 12h-2"></path>
+              <path d="M12 4v-2"></path>
+              <path d="M20 12h2"></path>
+              <path d="M12 20v2"></path>
+            </svg>
+            <span>Tema</span>
+          </label>
+        </div>
+        <a class="to-page-profile" href="akun.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            stroke-width="1.25"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z"></path>
+            <path
+              d="M6.201 18.744a4 4 0 0 1 3.799 -2.744h4a4 4 0 0 1 3.798 2.741"
+            ></path>
+            <path
+              d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+            ></path>
+          </svg>
+          <span>Akun</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ~~~~~~~~~ Section ~~~~~~~~~~~ -->
+    <div class="page kontak-page" id="kontak">
+      <section class="main">
+        <div class="sub-container">
+          <div class="content-left">
+            <h2 class="caption-page">Kontak Kami</h2>
+            <p>
+              Jangan ragu untuk menghubungi kami kapan saja. Kami akan
+              menghubungi Anda sesegera mungkin!.
+            </p>
+          </div>
+          <img src="/assets/img/kontak-kami/banner.png" class="content-right" />
+        </div>
+      </section>
+      <section class="contact-card">
+        <div class="sub-container">
+          <a class="card-item" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <path
+                d="M27.5001 16V24C27.5001 26.9455 25.1123 29.3333 22.1667 29.3333H11.5001C8.55456 29.3333 6.16675 26.9455 6.16675 24V16"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M23.1917 2.66669H10.4751C8.05194 2.66669 5.87293 4.32636 4.973 6.85742L3.96235 9.69985C3.65642 10.5603 3.44495 11.481 3.66809 12.3665C4.19655 14.4637 5.91105 16 7.94452 16C10.3991 16 12.389 13.7614 12.389 11C12.389 13.7614 14.3788 16 16.8334 16C19.288 16 21.2778 13.7614 21.2778 11C21.2778 13.7614 23.2677 16 25.7223 16C27.7558 16 29.4703 14.4637 29.9987 12.3665C30.2219 11.481 30.0104 10.5603 29.7045 9.69985L28.6938 6.85742C27.7939 4.32636 25.6149 2.66669 23.1917 2.66669Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.8334 25.3333C12.8334 23.1242 14.6242 21.3333 16.8334 21.3333C19.0425 21.3333 20.8334 23.1242 20.8334 25.3333V29.3333H12.8334V25.3333Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3>ALAMAT</h3>
+            <p>
+              Jln. H. Mansyur paud pelita harapan gondrong kec. cipondoh kota
+              tangerang kode pos 15146
+            </p>
+          </a>
+          <a class="card-item" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <path
+                d="M28.5 25.3333V23.1388C28.5 22.0483 27.8361 21.0678 26.8237 20.6628L24.1115 19.5779C22.8238 19.0629 21.3563 19.6208 20.736 20.8613L20.5 21.3333C20.5 21.3333 17.1667 20.6667 14.5 18C11.8333 15.3333 11.1667 12 11.1667 12L11.6387 11.764C12.8792 11.1437 13.4371 9.67618 12.9221 8.38848L11.8372 5.67629C11.4322 4.66387 10.4517 4 9.36125 4H7.16667C5.69391 4 4.5 5.19391 4.5 6.66667C4.5 18.4487 14.0513 28 25.8333 28C27.3061 28 28.5 26.8061 28.5 25.3333Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3>KONTAK</h3>
+            <p>+62 856 5520 8899</p>
+          </a>
+          <a class="card-item" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <path
+                d="M8.16671 10.6667L13.2083 14.0277C14.9998 15.222 17.3336 15.222 19.1251 14.0277L24.1667 10.6667M8.16671 28H24.1667C27.1122 28 29.5 25.6122 29.5 22.6667V9.33333C29.5 6.38781 27.1122 4 24.1667 4H8.16671C5.22119 4 2.83337 6.38781 2.83337 9.33333V22.6667C2.83337 25.6122 5.22119 28 8.16671 28Z"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3>EMAIL</h3>
+            <p>halo@gmail.com</p>
+          </a>
+        </div>
+      </section>
+      <section class="maps-card">
+        <div class="sub-container">
+          <form action="#" class="input-form">
+            <div>
+              <label for="send-name">Nama Lengkap</label>
+              <input type="text" placeholder="Masukkan Nama Lengkap" />
+            </div>
+            <div>
+              <label for="send-email">Alamat Email</label>
+              <input type="email" placeholder="Masukkan Email Aktif" />
+            </div>
+            <div>
+              <label for="send-message">Pesan</label>
+              <textarea placeholder="Isi Pesan"></textarea>
+            </div>
+            <button type="submit">Kirim Pesan</button>
+          </form>
+          <div class="map-view" style="width: 100%">
+            <iframe
+              width="100%"
+              height="400"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Jl.%20Kihajar%20Dewantoro%20No.64,%20RT.003/RW.003,%20Gondrong,%20Kec.%20Cipondoh,%20Kota%20Tangerang,%20Banten%2015146+(xgoremd)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.gps.ie/">gps trackers</a></iframe
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ~~~~~~~~~ Footer ~~~~~~~~~~~ -->
+    <footer>
+      <div class="sub-container">
+        <div class="footer-top">
+          <div class="caption">
+            <h3>Daftarkan Sekakrang! Untuk Mendapatkan Update Terbaru.</h3>
+          </div>
+          <div class="form-subscribe">
+            <input placeholder="Masukkan email" type="email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+        <div class="footer-mid">
+          <ul class="footer-nav">
+            <li>
+              <a class="to-page-home" href="./../index.html#home">Home</a>
+            </li>
+            <li>
+              <a class="to-page-layanan" href="./layanan.html">Layanan</a>
+            </li>
+            <li><a class="to-page-galery" href="#galery">Galery</a></li>
+            <li>
+              <a class="to-page-kerja-sama" href="./../pages/kerja-sama.html"
+                >Kerja Sama</a
+              >
+            </li>
+            <li><a class="to-page-kontak" href="./kontak.html">Kontak</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#facebook-account"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#twitter-account"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#instagram-account"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#youtube-account"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <span class="footer-dash"></span>
+        <div class="footer-bottom">
+          <div class="copyrigth">
+            <span>© 2024 BerkahTeknik. All rights reserved.</span>
+          </div>
+          <div class="logo">
+            <a class="to-page-home" href="./../index.html#home">BerkahTeknik</a>
+          </div>
+          <div class="terms-privacy">
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#privacy-policy">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./../assets/js/final.js"></script>
+  </body>
+</html>

@@ -103,6 +103,27 @@
         }
       }
     }
+
+    .bg-result-compare  {
+      /* width: 100px; */
+      height: 100%;
+    }
+    .bg-result-compare th {
+      display: none;
+    }
+
+    .table-compare td:nth-child(2) {
+      border-radius: 8px 0 0 8px;
+    }
+    .table-compare tbody:nth-child(even) {
+      background-color: inherit;
+    }
+    .table-compare .tr-mobile {
+      display: table-row;
+    }
+    .table-compare .tr-mobile td {
+      background-color: var(--Color-Palette-Light-BG);
+    }
   }
   .background-compare {
     position: fixed;
@@ -277,6 +298,11 @@
           width: 95%;
         }
       }
+    }
+    .table-compare thead td,
+    .table-compare thead th {
+      width: 150px;
+      height: 150px;
     }
   }
   section.product {

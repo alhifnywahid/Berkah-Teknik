@@ -126,6 +126,7 @@ button {
 body.scroll {
   overflow: hidden;
 }
+
 section.product,
 section.more-product {
   .product-content {
@@ -138,6 +139,9 @@ section.more-product {
     gap: 10px;
   }
   .list-product {
+    * {
+      pointer-events: none;
+    }
     transition: 0.2s ease;
     background-color: var(--Color-Palette-Light-UnitBG);
     border: 1px solid var(--Color-Palette-Light-Stroke);
@@ -778,6 +782,98 @@ footer {
     flex-direction: column;
     column-gap: 15px;
   }
+  .result-compare {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  .bg-result-compare {
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--Color-Palette-Light-UnitBG);
+    overflow: auto;
+    width: 1200px;
+    height: 90%; 
+  }
+  .bg-close-compare {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 5px;
+  }
+  .closed-result-compare { 
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    background-color: var(--Color-Palette-Light-Blue);
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .table-compare {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .table-compare thead td,
+  .table-compare thead th {
+    width: 250px; 
+  }
+  .table-compare thead img {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid var(--Color-Palette-Light-Stroke);
+    &:hover {
+      border-color: var(--Color-Palette-Light-Blue);
+    }
+  }
+  .table-compare tbody:nth-child(even) {
+    background-color: var(--Color-Palette-Light-BG);
+  }
+  /* .table-compare tbody {
+    background-color: var(--Color-Palette-Light-BG);
+    color: blue;
+  } */
+  .table-compare td,
+  .table-compare th {
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+    color: var(--Typography-Light-BasePrimary);
+    word-wrap: break-word;
+  }
+  .table-compare td:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .table-compare th {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .table-compare .tr-mobile {
+    display: none;
+    font-weight: bold;
+    td {
+      border-radius: 8px;
+    }
+  }
 
   section.product .filter-content {
     flex: auto;
@@ -889,7 +985,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.56);
     display: none;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     svg {
       cursor: pointer;
     }
@@ -1019,6 +1115,32 @@ footer {
   }
 }
 
+.notification {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  right: 10px;
+  bottom: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 5px;
+  .list-notification {
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--Color-Palette-Light-BG);
+    border: 1px solid var(--Color-Palette-Light-Stroke);
+  }
+  .item-notification {
+    padding: 8px;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    column-gap: 15px;
+    align-items: center;
+  }
+}
 .background-compare {
   position: fixed;
   width: 450px;
@@ -1036,9 +1158,6 @@ footer {
   align-items: center;
   flex-direction: column;
   color: var(--Typography-Light-BasePrimary);
-  * {
-    /* border: 1px solid; */
-  }
   div {
     display: flex;
     justify-content: space-between;
@@ -1050,11 +1169,14 @@ footer {
     font-size: 20px;
     font-weight: bold;
     color: var(--Typography-Light-BaseSecondary);
-  } 
+  }
   svg {
     cursor: pointer;
+    path {
+      pointer-events: none;
+    }
   }
-  .bg-list-img { 
+  .bg-list-img {
     border: 1px solid var(--Color-Palette-Light-Stroke);
     border-radius: 8px;
     width: 100px;
@@ -1111,7 +1233,7 @@ footer {
   border-radius: 8px;
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   box-shadow: var(--shadow);
 }
@@ -1238,63 +1360,22 @@ footer {
   .list-btn
   a:hover {
   text-decoration: none;
+} 
+
+.bg-table-detail-product {
+  height: 300px;
+  overflow: auto; 
 }
 
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  h3::before {
-  content: "Rp ";
-}
-
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  .description {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  .line {
-  display: flex;
-  border-bottom: 1px solid var(--Typography-Light-BaseSecondary);
-  padding-bottom: 10px;
-}
-
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  .line
-  span {
-  width: 40%;
-  color: var(--Typography-Light-BasePrimary);
-  font-weight: 500;
-}
-
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  .line
-  .dot {
+.table-detail-product {
   width: 100%;
+  text-align: left;
 }
+.table-detail-product th,
+.table-detail-product td {
+  padding: 10px;
+  border-bottom: 1px solid var(--Color-Palette-Light-Stroke);
 
-.detail-product-page
-  section.view-product
-  .sub-container
-  .detail-description
-  .line
-  .dot::before {
-  content: " : ";
 }
 
 .detail-product-page section.more-product h3 {
@@ -2430,5 +2511,95 @@ footer {
   }
   80% {
     background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+/* ~~~~~~~~~ SVG Styling ~~~~~~~~~~~ */
+.svg-success {
+  stroke: none;
+  stroke-width: 0;
+  stroke-dasharray: none;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 10;
+  fill: none;
+  fill-rule: nonzero;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+
+  .group {
+    stroke: none;
+    stroke-width: 0;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: none;
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+
+  .circle {
+    stroke: none;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: rgb(40, 201, 55);
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+
+  .path {
+    stroke: none;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: rgb(255, 255, 255);
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+}
+.svg-notsuccess {
+  width: 30px;
+  height: 30px;
+  .group {
+    stroke: none;
+    stroke-width: 0;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: none;
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+
+  .red-circle {
+    stroke: none;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: rgb(236, 0, 0);
+    fill-rule: nonzero;
+    opacity: 1;
+  }
+
+  .white-path {
+    stroke: none;
+    stroke-width: 1;
+    stroke-dasharray: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-miterlimit: 10;
+    fill: rgb(255, 255, 255);
+    fill-rule: nonzero;
+    opacity: 1;
   }
 }

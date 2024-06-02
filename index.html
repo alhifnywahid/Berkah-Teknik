@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
@@ -337,7 +341,6 @@
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#797f85"
-                      preserveAspectRatio="xMidYMid meet"
                       width="32px"
                       height="32px"
                       viewBox="0 0 24 24"
@@ -357,18 +360,19 @@
                 <div class="header-filter">
                   <h2>Semua Filter</h2>
                   <label for="btn-filter">
-                    <svg 
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#797f85"
-                    preserveAspectRatio="xMidYMid meet"
-                    width="30"
-                    height="30"
-                    viewBox="0 0 24 24" 
-                  >
-                    <path 
-                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
-                    ></path>
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#797f85"
+                      preserveAspectRatio="xMidYMid meet"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="event-none"
+                        d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
+                      ></path>
+                    </svg>
                   </label>
                 </div>
                 <div class="list-filter">
@@ -508,12 +512,12 @@
                 </div>
               </div>
             </div>
+            <div class="notification"></div>
             <div class="background-compare">
               <div class="header-filter">
                 <h2>Bandingkan Produk</h2>
                 <label for="compare">
                   <svg
-                    data-v-a1fc16c0=""
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#797f85"
                     preserveAspectRatio="xMidYMid meet"
@@ -531,64 +535,13 @@
               </div>
               <p>Pilih maksimum 3 produk untuk di bandingkan</p>
               <div class="checked-product">
-                <div class="bg-list-img">
-                  <!-- <img
-                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
-                    class="list-product"
-                  /> -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="compare-close"
-                  >
-                    <path
-                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
-                    ></path>
-                  </svg>
-                </div>
+                <div class="bg-list-img" data-product=""></div>
                 +
-                <div class="bg-list-img">
-                  <!-- <img
-                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
-                    class="list-product"
-                  /> -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="compare-close"
-                  >
-                    <path
-                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
-                    ></path>
-                  </svg>
-                </div>
+                <div class="bg-list-img" data-product=""></div>
                 +
-                <div class="bg-list-img">
-                  <!-- <img
-                    src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium/catalog-image/MTA-23908397/panasonic_ac_panasonic_1-2_pk_yn-05wkj_1-2_pk_r32_-free_instalasi-material-_garansi_resmi_full01_b4052a29.jpg"
-                    class="list-product"
-                  /> -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="xMidYMid meet"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    class="compare-close"
-                  >
-                    <path
-                      d="M13.7672 12L17.632 8.13839C18.1227 7.64819 18.1227 6.85786 17.632 6.36765C17.1414 5.87745 16.3504 5.87745 15.8598 6.36765L11.995 10.2293L8.14018 6.37766C7.64956 5.88745 6.85857 5.88745 6.36796 6.37766C5.87735 6.86786 5.87735 7.65819 6.36796 8.1484L10.2228 12L6.36796 15.8616C5.87735 16.3518 5.87735 17.1421 6.36796 17.6323C6.85857 18.1226 7.64956 18.1226 8.14018 17.6323L12.005 13.7707L15.8598 17.6223C16.3504 18.1125 17.1414 18.1125 17.632 17.6223C18.1227 17.1321 18.1227 16.3418 17.632 15.8516L13.7772 12H13.7672Z"
-                    ></path>
-                  </svg>
-                </div>
+                <div class="bg-list-img" data-product=""></div>
               </div>
-              <button>Bandingkan</button>
+              <button class="start-compare">Bandingkan</button>
             </div>
           </div>
           <div class="product-content flex-product">
@@ -605,6 +558,116 @@
                 <span class="price">10000</span>
               </div>
             </a>
+          </div>
+          <div class="result-compare">
+            <div class="bg-result-compare">
+              <table class="table-compare">
+                <thead>
+                  <tr data-c="thumbnail">
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Produk</td>
+                  </tr>
+                  <tr data-c="title">
+                    <th>Produk</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Harga</td>
+                  </tr>
+                  <tr data-c="price">
+                    <th>Harga</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Brand</td>
+                  </tr>
+                  <tr data-c="brand">
+                    <th>Brand</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Besaran PK</td>
+                  </tr>
+                  <tr data-c="pk">
+                    <th>Besaran PK</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Teknologi AC</td>
+                  </tr>
+                  <tr data-c="teknologi">
+                    <th>Teknologi AC</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Konsumsi Daya</td>
+                  </tr>
+                  <tr data-c="daya">
+                    <th>Konsumsi Daya</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Dimensi Produk</td>
+                  </tr>
+                  <tr data-c="dimensi">
+                    <th>Dimensi Produk</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Berat</td>
+                  </tr>
+                  <tr data-c="berat">
+                    <th>Berat</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Kelengkapan Paket</td>
+                  </tr>
+                  <tr data-c="kelengkapan">
+                    <th>Kelengkapan Paket</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Lain-lain</td>
+                  </tr>
+                  <tr data-c="lainnya">
+                    <th>Lain-lain</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Nomor Sertifikat SNI</td>
+                  </tr>
+                  <tr data-c="sni">
+                    <th>Nomor Sertifikat SNI</th>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr class="tr-mobile">
+                    <td colspan="3">Nomor Pendaftaran Barang</td>
+                  </tr>
+                  <tr data-c="nodaftar">
+                    <th>Nomor Pendaftaran Barang</th>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="bg-close-compare">
+                <button class="closed-result-compare">KELUAR</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -16,13 +16,6 @@ const toogleMobile = document.querySelector("input.toogle-show-menu");
 // 		});
 // });
 
-document.addEventListener("scroll", () => {
-	if (window.scrollY >= 60) {
-		document.querySelector("header").classList.add("shadow-on-scroll");
-	} else {
-		document.querySelector("header").classList.remove("shadow-on-scroll");
-	}
-});
 
 document.addEventListener("change", (e) => {
 	const provinsi = document.querySelector("#provinsi");

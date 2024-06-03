@@ -7,6 +7,28 @@ const $ = (selector) => {
 	}
 };
 
+function updateCart() {
+	const cartLeng = JSON.parse(localStorage.getItem("x-user")).cart;
+	$(".indicator")[0].innerHTML = cartLeng.length;
+	$(".indicator")[1].innerHTML = cartLeng.length;
+	if (cartLeng.length === 0) {
+		$(".cart-show").innerHTML = "Keranjang Kosong!";
+	} else {
+		let dummy = "";
+		cartLeng.forEach((item) => {
+			dummy += `
+		<a href="product.html${item.id}" class="cart-item">
+			<img src="${item.image[0]}">
+			<div class="cart-desc">
+				<p>${item.title}</p>
+				<p>${formatIDR(item.price)}</p>
+			</div>
+		</a>
+		`;
+		});
+		$(".cart-show").innerHTML = dummy;
+	}
+}
 const getURL = (index, params) => {
 	const url = [`https://gist.githubusercontent.com/alhifnywahid/9e3f6619f9daf775a9c6ba12144034d4/raw/e307bde340c9593692730b32d2738126c3c4edbf/data.json`, `https://source.unsplash.com/random/${params}`, "https://alamat.thecloudalert.com/api/"];
 	return url[index];
@@ -70,7 +92,6 @@ const searchProduct = (query) => {
 		.then((e) => {
 			e.forEach((item) => {
 				if (item.title.toLowerCase().includes(query.toLowerCase())) {
-					console.log(item.title);
 					listProduct += `
 									<a class="list-product" href="product.html#${item.id}" id="${item.id}" target="_blank">
 										<div class="image-content">
@@ -183,4 +204,54 @@ const createThumb = (element, href, src) => {
 	element.appendChild(td);
 };
 
-export { $, loader, getURL, getProduct, randomImg, getImageGalery, randomNumber, change, toogleScroll, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb };
+class LocalDB {
+	dbName = "x-user";
+	constructor() {
+		if (!localStorage.getItem(this.dbName)) {
+			localStorage.setItem(
+				this.dbName,
+				JSON.stringify({
+					user: {
+						name: "",
+						email: "",
+						notelpon: "",
+						password: "",
+					},
+					cart: [],
+				})
+			);
+		} else {
+			console.log("Data sudah di buat.");
+		}
+	}
+
+	getData = () => {
+		return JSON.parse(localStorage.getItem(this.dbName));
+	}; 
+
+	addCart = (id) => {
+		let db = JSON.parse(localStorage.getItem(this.dbName));
+		if (db.cart.some((e) => e.id === id)) {
+			return {
+				status: false,
+				msg: "Produk sudah ada di keranjang",
+			};
+		} else {
+			fetch("../assets/products/products.json")
+				.then((res) => res.json())
+				.then((data) => {
+					const dummy = data.filter((e) => e.id === id);
+					db.cart.push(dummy[0]);
+					localStorage.setItem(this.dbName, JSON.stringify(db));
+					updateCart(); 
+				});
+			return {
+				status: true,
+				msg: "Produk sudah di tambahkan ke keranjang",
+				cart: parseInt(db.cart.length + 1),
+			};
+		}
+	};
+}
+
+export { $, loader, getURL, getProduct, randomImg, getImageGalery, randomNumber, change, toogleScroll, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB, updateCart };

@@ -8,10 +8,6 @@
       href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
@@ -24,27 +20,25 @@
     <header>
       <nav class="sub-container">
         <div class="content-left">
-          <a class="to-page-home" href="#home">
+          <a href="#home">
             <h1 class="font">LOGO</h1>
           </a>
         </div>
         <div class="content-middle">
           <ul>
-            <li><a class="to-page-home" href="#home">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li>
-              <a class="to-page-layanan" href="layanan.html">Layanan</a>
+              <a href="layanan.html">Layanan</a>
             </li>
-            <li><a class="to-page-galery" href="galery.html">Galery</a></li>
+            <li><a href="galery.html">Galery</a></li>
             <li>
-              <a class="to-page-kerja-sama" href="kerja-sama.html"
-                >Kerja Sama</a
-              >
+              <a href="kerja-sama.html">Kerja Sama</a>
             </li>
-            <li><a class="to-page-kontak" href="kontak.html">Kontak</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
           </ul>
         </div>
         <div class="content-right">
-          <a class="to-page-profile" href="akun.html">
+          <a href="akun.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
@@ -66,41 +60,34 @@
               ></path>
             </svg>
           </a>
-          <a href="#theme">
+          <a href="cart.html" class="cart-container">
             <svg
-              data-active-theme="light"
-              xmlns="http://www.w3.org/2000/svg"
-              class=""
-              width="28"
-              height="28"
+              width="30"
+              height="30"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
               fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
               stroke-linecap="round"
               stroke-linejoin="round"
+              class="feather feather-shopping-cart"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
-              ></path>
-              <path d="M6.343 17.657l-1.414 1.414"></path>
-              <path d="M6.343 6.343l-1.414 -1.414"></path>
-              <path d="M17.657 6.343l1.414 -1.414"></path>
-              <path d="M17.657 17.657l1.414 1.414"></path>
-              <path d="M4 12h-2"></path>
-              <path d="M12 4v-2"></path>
-              <path d="M20 12h2"></path>
-              <path d="M12 20v2"></path>
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2 12h12l2-8H6"></path>
             </svg>
+            <div class="indicator"></div>
           </a>
+          <div class="cart-show">
+            <p>Keranjang Kosong!!!</p>
+          </div>
         </div>
       </nav>
     </header>
     <!-- ~~~~~~~~~ Navigasi Mobile ~~~~~~~~~~~ -->
     <div class="nav-mobile">
       <div class="sub-container">
-        <a class="to-page-home" href="#home">
+        <a href="#home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -151,44 +138,34 @@
             id="menu"
           />
           <div class="show-menu">
-            <a class="to-page-layanan" href="layanan.html">Layanan</a>
-            <a class="to-page-galery" href="galery.html">Galery</a>
-            <a class="to-page-kerja-sama" href="kerja-sama.html">Kerja Sama</a>
-            <a class="to-page-kontak" href="kontak.html">Kontak</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="galery.html">Galery</a>
+            <a href="kerja-sama.html">Kerja Sama</a>
+            <a href="kontak.html">Kontak</a>
           </div>
         </div>
         <div class="toogle-theme">
-          <label for="theme">
+          <a href="cart.html" class="cart-container">
             <svg
-              data-active-theme="light"
-              xmlns="http://www.w3.org/2000/svg"
-              class=""
-              width="28"
-              height="28"
+              width="30"
+              height="30"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
               fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
               stroke-linecap="round"
               stroke-linejoin="round"
+              class="feather feather-shopping-cart"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
-              ></path>
-              <path d="M6.343 17.657l-1.414 1.414"></path>
-              <path d="M6.343 6.343l-1.414 -1.414"></path>
-              <path d="M17.657 6.343l1.414 -1.414"></path>
-              <path d="M17.657 17.657l1.414 1.414"></path>
-              <path d="M4 12h-2"></path>
-              <path d="M12 4v-2"></path>
-              <path d="M20 12h2"></path>
-              <path d="M12 20v2"></path>
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2 12h12l2-8H6"></path>
             </svg>
-            <span>Tema</span>
-          </label>
+            <div class="indicator"></div>
+          </a>
+          <span>Keranjang</span>
         </div>
-        <a class="to-page-profile" href="akun.html">
+        <a href="akun.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="28"
@@ -216,7 +193,7 @@
 
     <div class="page home-page" id="home">
       <!-- main -->
-      <section class="main">
+      <section class="page main">
         <main class="sub-container">
           <div class="content-left">
             <h2>Berkah Teknik</h2>
@@ -225,16 +202,16 @@
               sistem pendingin udara (AC) Anda.
             </p>
             <div class="main-button">
-              <a class="to-page-layanan" href="./pages/layanan.html">
+              <a href="layanan.html">
                 <button>Layanan</button>
               </a>
-              <a class="to-page-kontak" href="#kontak">
+              <a href="#kontak">
                 <button>Hubungi Kami</button>
               </a>
             </div>
           </div>
           <div class="content-right">
-            <img src="/assets/img/banner-home.png" />
+            <img src="assets/img/banner-home.png" />
           </div>
         </main>
       </section>
@@ -687,15 +664,15 @@
         </div>
         <div class="footer-mid">
           <ul class="footer-nav">
-            <li><a class="to-page-home" href="#home">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li>
-              <a class="to-page-layanan" href="./pages/layanan.html">Layanan</a>
+              <a href="layanan.html">Layanan</a>
             </li>
-            <li><a class="to-page-galery" href="#galery">Galery</a></li>
+            <li><a href="galery.html">Galery</a></li>
             <li>
-              <a class="to-page-kerja-sama" href="#kerja-sama">Kerja Sama</a>
+              <a href="kerja-sama" .html>Kerja Sama</a>
             </li>
-            <li><a class="to-page-kontak" href="#kontak">Kontak</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
           </ul>
           <div class="footer-social">
             <a href="#facebook-account"
@@ -714,7 +691,7 @@
             <span>© 2024 BerkahTeknik. All rights reserved.</span>
           </div>
           <div class="logo">
-            <a class="to-page-home" href="#home">BerkahTeknik</a>
+            <a href="#home">BerkahTeknik</a>
           </div>
           <div class="terms-privacy">
             <a href="#terms-of-service">Terms of Service</a>
@@ -726,6 +703,6 @@
     <!-- footer -->
 
     <script type="module" src="/assets/js/script.js"></script>
-    <script type="module" src="/assets/js/final.js"></script>
+    <script type="module" src="assets/js/final.js"></script>
   </body>
 </html>

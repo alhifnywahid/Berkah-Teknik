@@ -1,4 +1,6 @@
-import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb } from "./utils/Function.js";
+import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB as ldb, updateCart } from "./utils/Function.js"; 
+
+const LocalDB = new ldb();
 
 const URL = window.location.href;
 const hash = window.location.hash;
@@ -15,7 +17,7 @@ if (URL.includes("galery")) {
 		$(".full-img").setAttribute("src", data.image[0]);
 		$("h2.title-product").textContent = data.title;
 		$("h3.price").textContent = formatIDR(data.price);
-		$("a.get-co").setAttribute('href', `checkout.html#${data.id}`)
+		$("a.get-co").setAttribute("href", `checkout.html#${data.id}`);
 		let img = "";
 		data.image.forEach((e) => {
 			img += `<img id="#image-item" src="${e}">`;
@@ -23,6 +25,7 @@ if (URL.includes("galery")) {
 		$("[data-dp] td").forEach((item) => {
 			item.remove();
 		});
+		$(".add-to-cart").setAttribute("id", data.id);
 		$("div.list-view-img").innerHTML = img;
 		create($('[data-dp="brand"]'), data.brand);
 		create($('[data-dp="pk"]'), spec.besaran_pk);
@@ -35,9 +38,39 @@ if (URL.includes("galery")) {
 		create($('[data-dp="sni"]'), spec.nomor_sertifikat_sni);
 		create($('[data-dp="nodaftar"]'), spec.nomor_pendaftaran_barang);
 	})();
-} else if (hash.includes("home") || hash.includes("")) {
+} else if (URL.includes("index") || hash.includes("home")) {
+	/* ~~~~~~~~~~ ========= ~~~~~~~~~~ */
+	$("#compare").addEventListener("change", () => {
+		if ($("#compare").checked) {
+			set(".background-compare", "flex");
+			$(".product-content .list-product").forEach((item) => {
+				item.addEventListener("click", setClickProduct);
+			});
+		} else {
+			set(".background-compare", "none");
+			$(".product-content .list-product").forEach((item) => {
+				item.removeEventListener("click", setClickProduct);
+			});
+		}
+	});
+	/* ~~~~~~~~~~ Set Filter ~~~~~~~~~~ */
+	$("#btn-filter").addEventListener("change", (e) => {
+		$("#btn-filter").checked ? set(".background-filter", "flex", toogleScroll) : set(".background-filter", "none", toogleScroll);
+		if ($("#compare").checked) $("#compare").click();
+	});
+	/* ~~~~~~~~~~ set search ~~~~~~~~~~ */
+	$("#search-data").addEventListener("input", (event) => {
+		searchProduct(event.target.value);
+	});
 	/* ~~~~~~~~~~ Get Data Product for HomePage ~~~~~~~~~~ */
 	getProduct($(".product-content"), showProduct());
+} else if (URL.includes("checkout")) {
+	(async () => {
+		const data = await dbsProduct(hash.slice(1));
+		$('[data-co="thumbnail"]').setAttribute("src", data.image[0]);
+		$('[data-co="produk"]').textContent = data.title;
+		$('[data-co="price"]').textContent = formatIDR(data.price);
+	})();
 }
 
 /* ~~~~~~~~~~ Event HashChange ~~~~~~~~~~ */
@@ -46,17 +79,6 @@ window.addEventListener("hashchange", (event) => {
 	const oldURL = event.oldURL;
 	if (newURL.endsWith("daftar")) return set(".form-login", "none", ".form-register", "flex");
 	if (newURL.endsWith("masuk")) return set(".form-register", "none", ".form-login", "flex");
-});
-
-/* ~~~~~~~~~~ (Search Product) ~~~~~~~~~~ */
-$("#search-data").addEventListener("input", (event) => {
-	searchProduct(event.target.value);
-});
-
-/* ~~~~~~~~~~ Set Filter ~~~~~~~~~~ */
-$("#btn-filter").addEventListener("change", (e) => {
-	$("#btn-filter").checked ? set(".background-filter", "flex", toogleScroll) : set(".background-filter", "none", toogleScroll);
-	if ($("#compare").checked) $("#compare").click();
 });
 
 /* ~~~~~~~~~~ Set Compare ~~~~~~~~~~ */
@@ -99,30 +121,6 @@ const setClickProduct = async (event) => {
 	}
 };
 
-$("#compare").addEventListener("change", () => {
-	if ($("#compare").checked) {
-		set(".background-compare", "flex");
-		$(".product-content .list-product").forEach((item) => {
-			item.addEventListener("click", setClickProduct);
-		});
-	} else {
-		set(".background-compare", "none");
-		$(".product-content .list-product").forEach((item) => {
-			item.removeEventListener("click", setClickProduct);
-		});
-	}
-});
-
-/* ~~~~~~~~~~ Event Scroll ~~~~~~~~~~ */
-document.addEventListener("scroll", () => {
-	/* ~~~~~~~~~~ Added shadow in the header ~~~~~~~~~~ */
-	if (window.scrollY >= 60) {
-		$("header").classList.add("shadow-on-scroll");
-	} else {
-		$("header").classList.remove("shadow-on-scroll");
-	}
-});
-
 /* ~~~~~~~~~~ Event Click ~~~~~~~~~~ */
 document.addEventListener("click", (event) => {
 	let target = event.target;
@@ -153,7 +151,7 @@ document.addEventListener("click", (event) => {
 			// $('[data-compare="thumbnail"] img')[index].setAttribute("src", getData.image[0]);
 			createThumb($('[data-c="thumbnail"]'), `product.html#${id}`, image[0]);
 			create($('[data-c="title"]'), getData.title);
-			create($('[data-c="price"]'), getData.price);
+			create($('[data-c="price"]'), formatIDR(getData.price));
 			create($('[data-c="brand"]'), getData.brand);
 			create($('[data-c="pk"]'), spec.besaran_pk);
 			create($('[data-c="teknologi"]'), spec.teknologi_ac);
@@ -164,13 +162,22 @@ document.addEventListener("click", (event) => {
 			create($('[data-c="lainnya"]'), spec.lain_lain);
 			create($('[data-c="sni"]'), spec.nomor_sertifikat_sni);
 			create($('[data-c="nodaftar"]'), spec.nomor_pendaftaran_barang);
-		});
-		setTimeout(() => {}, 300);
+		}); 
 		set(".result-compare", "flex", toogleScroll);
 	} else if (target.classList.contains("closed-result-compare")) {
 		set(".result-compare", "none", toogleScroll);
 		$("[data-c] td").forEach((item) => {
 			item.remove();
 		});
+	} else if (target.classList.contains("photo-item")) { 
+		const image = $("#galery .thumbnail-view");
+		const target = target.children[0].getAttribute("src");
+		image.style.backgroundImage = `url(${target})`;
+		change("#galery .thumbnail-view", "flex", toogleScroll);
+	} else if (target.classList.contains("add-to-cart")) { 
+		const db = LocalDB.addCart($(".add-to-cart").getAttribute("id"));
+		if (!db.status) return;  
 	}
 });
+
+updateCart();

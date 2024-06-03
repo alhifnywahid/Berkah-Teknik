@@ -1,4 +1,4 @@
-import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB as ldb, updateCart } from "./utils/Function.js"; 
+import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB as ldb, updateCart, Notification } from "./utils/Function.js"; 
 
 const LocalDB = new ldb();
 
@@ -176,7 +176,7 @@ document.addEventListener("click", (event) => {
 		change("#galery .thumbnail-view", "flex", toogleScroll);
 	} else if (target.classList.contains("add-to-cart")) { 
 		const db = LocalDB.addCart($(".add-to-cart").getAttribute("id"));
-		if (!db.status) return;  
+		Notification(db.msg, db.status);
 	}
 });
 

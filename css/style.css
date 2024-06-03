@@ -1113,8 +1113,9 @@ footer {
     align-items: center;
   }
 }
-
-.notification {
+ 
+.notification,
+.notifications {
   position: fixed;
   width: fit-content;
   height: fit-content;
@@ -1139,6 +1140,10 @@ footer {
     column-gap: 15px;
     align-items: center;
   }
+}
+.notifications { 
+  right: 10px;
+  top: 70px; 
 }
 .background-compare {
   position: fixed;
@@ -1335,6 +1340,12 @@ footer {
   display: flex;
   gap: 10px;
   cursor: pointer;
+}
+
+section.view-product .title-product {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .detail-product-page

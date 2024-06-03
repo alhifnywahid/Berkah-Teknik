@@ -253,6 +253,12 @@
     width: 16px;
     height: 16px; 
   }
+  .notifications {
+    top: 60px;
+    right: 0; 
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* SM */
@@ -369,10 +375,7 @@
           }
           h3 {
             margin-top: 10px;
-            font-size: 20px;
-            &::before {
-              content: "Rp ";
-            }
+            font-size: 20px; 
           }
           button {
             margin: 10px 0;

@@ -1,3 +1,5 @@
+const blibli = 'https://gist.githubusercontent.com/alhifnywahid/0d58fcea7f29b0a7dbb7526156189803/raw/57916552249b834c1b35804473f06fdee33615a8/blibli.json'
+
 const $ = (selector) => {
 	const elemen = document.querySelectorAll(selector);
 	if (elemen.length > 1) {
@@ -17,7 +19,7 @@ function updateCart() {
 		let dummy = "";
 		cartLeng.forEach((item) => {
 			dummy += `
-		<a href="product.html${item.id}" class="cart-item">
+		<a href="product.html#${item.id}" class="cart-item" target="_blank">
 			<img src="${item.image[0]}">
 			<div class="cart-desc">
 				<p>${item.title}</p>
@@ -61,7 +63,7 @@ const getImageGalery = (max, domElement) => {
 
 const getProduct = (dom, number) => {
 	let listProduct = "";
-	fetch("../assets/products/products.json")
+	fetch(blibli)
 		.then((e) => e.json())
 		.then((e) => {
 			e.forEach((item, index) => {
@@ -87,7 +89,7 @@ const getProduct = (dom, number) => {
 };
 const searchProduct = (query) => {
 	let listProduct = "";
-	fetch("../assets/products/products.json")
+	fetch(blibli)
 		.then((e) => e.json())
 		.then((e) => {
 			e.forEach((item) => {
@@ -144,7 +146,7 @@ const showNotification = (message, isSuccess = true) => {
 };
 
 const dbsProduct = async (query) => {
-	const res = await fetch("../assets/products/products.json");
+	const res = await fetch(blibli);
 	const data = await res.json();
 	const done = data.find((e) => e.id === query);
 	return done;
@@ -252,7 +254,7 @@ class LocalDB {
 				msg: "Produk sudah ada di keranjang",
 			};
 		} else {
-			fetch("../assets/products/products.json")
+			fetch(blibli)
 				.then((res) => res.json())
 				.then((data) => {
 					const dummy = data.filter((e) => e.id === id);

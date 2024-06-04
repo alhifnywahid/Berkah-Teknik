@@ -12,10 +12,14 @@
     <link rel="stylesheet" href="./../css/responsive.css" />
   </head>
   <body>
+    <!-- ~~~~~~~~~ Notification ~~~~~~~~~~~ -->
+    <div class="notifications"></div>
+
     <!-- ~~~~~~~~~ Loader ~~~~~~~~~~~ -->
     <div class="bg-loader">
       <div class="loader"></div>
     </div>
+
     <!-- ~~~~~~~~~ Hader ~~~~~~~~~~~ -->
     <header>
       <nav class="sub-container">
@@ -84,6 +88,7 @@
         </div>
       </nav>
     </header>
+
     <!-- ~~~~~~~~~ Navigasi Mobile ~~~~~~~~~~~ -->
     <div class="nav-mobile">
       <div class="sub-container">
@@ -218,18 +223,18 @@
             </div>
             <ul class="list-menu">
               <li>
-                <a href="akun.html">Akun</a>
+                <a data-ac="m-account" href="akun.html#akun-detail">Akun</a>
               </li>
               <li>
-                <a class="to-menu-address" href="#menu-address">Alamat</a>
+                <a data-ac="m-address" href="#menu-address">Alamat</a>
               </li>
               <li>
-                <a class="to-menu-pesanan" href="#menu-pesanan">Pesanan</a>
+                <a data-ac="m-shoping" href="#menu-pesanan">Pesanan</a>
               </li>
-              <li><a class="to-exit" href="#exit">Keluar</a></li>
+              <li><a data-ac="m-exit" href="#exit">Keluar</a></li>
             </ul>
           </div>
-          <div class="show-menu-user profile">
+          <div data-layout="m-account" class="show-menu-user profile">
             <div class="detail-account">
               <h3>Detail Akun</h3>
               <div class="table-account">
@@ -283,7 +288,7 @@
               </div>
             </div>
           </div>
-          <div class="show-menu-user menu-address">
+          <div data-layout="m-address" class="show-menu-user menu-address">
             <div class="detail-account">
               <h3>Alamat</h3>
               <div class="bg-address">
@@ -328,7 +333,7 @@
               </div>
             </div>
           </div>
-          <div class="show-menu-user menu-pesanan">
+          <div data-layout="m-shoping" class="show-menu-user menu-pesanan">
             <div class="detail-account">
               <h3>Riwayat Pesanan</h3>
               <div class="bg-table">

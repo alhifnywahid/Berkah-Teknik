@@ -1,4 +1,4 @@
-import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB as ldb, updateCart, Notification } from "./utils/Function.js"; 
+import { $, loader, toogleScroll, change as set, getProduct, randomImg, getImageGalery, searchProduct, showProduct, dbsProduct, showNotification, formatIDR, create, createThumb, LocalDB as ldb, updateCart, Notification } from "./utils/Function.js";
 
 const LocalDB = new ldb();
 
@@ -7,20 +7,20 @@ const hash = window.location.hash;
 
 if (URL.includes("galery")) {
 	/* ~~~~~~~~~~ Get Image for GaleryPage ~~~~~~~~~~ */
-	getImageGalery(5, $("section.list-photo .img-content"));
+	getImageGalery(200, $("section.list-photo .img-content"));
 } else if (URL.includes("product")) {
 	/* ~~~~~~~~~~ Get Product Recomendations for ProductPage ~~~~~~~~~~ */
 	getProduct($("#product-recommendations"), 5);
 	(async () => {
 		const data = await dbsProduct(hash.slice(1));
 		const { specification: spec } = data;
-		$(".full-img").setAttribute("src", data.image[0]);
+		$(".bg-full-img").innerHTML = `<img class="full-img" src="${data.image[0]}"/>`;
 		$("h2.title-product").textContent = data.title;
 		$("h3.price").textContent = formatIDR(data.price);
 		$("a.get-co").setAttribute("href", `checkout.html#${data.id}`);
 		let img = "";
-		data.image.forEach((e) => {
-			img += `<img id="#image-item" src="${e}">`;
+		data.image.forEach((e, i) => {
+			img += `<img class="img-item ${i === 0 ? "active" : ""}" src="${e}">`;
 		});
 		$("[data-dp] td").forEach((item) => {
 			item.remove();
@@ -144,11 +144,9 @@ document.addEventListener("click", (event) => {
 		});
 		if (product.length === 0 || product.length === 1) return showNotification("Minimal 2 produk untuk di bandingkan!", false);
 
-		let idProduct = [];
 		$(".bg-list-img").forEach(async (item, index) => {
 			const getData = await dbsProduct(item.getAttribute("data-product"));
 			const { id, image, specification: spec } = getData;
-			// $('[data-compare="thumbnail"] img')[index].setAttribute("src", getData.image[0]);
 			createThumb($('[data-c="thumbnail"]'), `product.html#${id}`, image[0]);
 			create($('[data-c="title"]'), getData.title);
 			create($('[data-c="price"]'), formatIDR(getData.price));
@@ -162,21 +160,49 @@ document.addEventListener("click", (event) => {
 			create($('[data-c="lainnya"]'), spec.lain_lain);
 			create($('[data-c="sni"]'), spec.nomor_sertifikat_sni);
 			create($('[data-c="nodaftar"]'), spec.nomor_pendaftaran_barang);
-		}); 
+		});
 		set(".result-compare", "flex", toogleScroll);
 	} else if (target.classList.contains("closed-result-compare")) {
 		set(".result-compare", "none", toogleScroll);
 		$("[data-c] td").forEach((item) => {
 			item.remove();
 		});
-	} else if (target.classList.contains("photo-item")) { 
+	} else if (target.classList.contains("photo-item")) {
 		const image = $("#galery .thumbnail-view");
 		const target = target.children[0].getAttribute("src");
 		image.style.backgroundImage = `url(${target})`;
 		change("#galery .thumbnail-view", "flex", toogleScroll);
-	} else if (target.classList.contains("add-to-cart")) { 
+	} else if (target.classList.contains("add-to-cart")) {
 		const db = LocalDB.addCart($(".add-to-cart").getAttribute("id"));
 		Notification(db.msg, db.status);
+	} else if (target.classList.contains("cotinue-pay")) {
+		Notification("Maaf, fitur ini belum tersedia.", false);
+	} else if (target.classList.contains("img-item")) {
+		const img = $(".img-item");
+		const fullImg = $(".full-img");
+		fullImg.setAttribute("src", target.getAttribute("src"));
+		img.forEach((item) => {
+			if (item.getAttribute("src") === fullImg.getAttribute("src")) {
+				item.classList.add("active");
+			} else {
+				item.classList.remove("active");
+			}
+		});
+	} else if (target.classList.contains("cart-container")) {
+		event.preventDefault();
+		Notification("Maaf, fitur ini belum tersedia.", false);
+	} else if (target.getAttribute("data-ac")) {
+		if (target.getAttribute("data-ac") === "m-exit") return set(".exit-container", "flex", toogleScroll);
+		$("[data-layout]").forEach((layout) => {
+			if (layout.getAttribute("data-layout") === target.getAttribute("data-ac")) {
+				layout.style.display = "flex";
+			} else {
+				layout.style.display = "none";
+			}
+		});
+	} else if (target.getAttribute("data-btn")) {
+		if (target.getAttribute("data-btn") === "exit-yes") return (window.location.href = window.location.origin + "/auth.html");
+		if (target.getAttribute("data-btn") === "exit-no") return set(".exit-container", "none", toogleScroll);
 	}
 });
 

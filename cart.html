@@ -14,12 +14,10 @@
   <body>
     <!-- ~~~~~~~~~ Notification ~~~~~~~~~~~ -->
     <div class="notifications"></div>
-
     <!-- ~~~~~~~~~ Loader ~~~~~~~~~~~ -->
     <div class="bg-loader">
       <div class="loader"></div>
     </div>
-
     <!-- ~~~~~~~~~ Hader ~~~~~~~~~~~ -->
     <header>
       <nav class="sub-container">
@@ -88,7 +86,6 @@
         </div>
       </nav>
     </header>
-
     <!-- ~~~~~~~~~ Navigasi Mobile ~~~~~~~~~~~ -->
     <div class="nav-mobile">
       <div class="sub-container">
@@ -197,149 +194,69 @@
     </div>
 
     <!-- ~~~~~~~~~ Section ~~~~~~~~~~~ -->
-    <div class="page checkout-page" id="checkout">
-      <div class="sub-container">
-        <h2 class="caption-page">Detail Pengiriman</h2>
-        <div class="bg-all">
-          <div class="contact-address">
-            <div class="sparate">
-              <h4>Kontak & Alamat</h4>
-              <label class="item" for="rumah">
-                <input id="rumah" type="radio" name="alamat" />
-                Alamat 1
-              </label>
-              <label class="item" for="kantor">
-                <input id="kantor" type="radio" name="alamat" />
-                Alamat 2
-              </label>
-            </div>
-            <div class="sparate">
-              <h4>Pilih Pengiriman</h4>
-              <label class="item" for="ambilsendiri">
-                <input id="ambilsendiri" type="radio" name="pengiriman" />
-                Ambil Sendiri
-              </label>
-              <label class="item" for="dikirim">
-                <input id="dikirim" type="radio" name="pengiriman" />
-                Kirim
-              </label>
-            </div>
-            <div class="sparate payment-method">
-              <h4>Pembayaran</h4>
-              <div class="sparate list-payment-method">
-                <label class="item" for="payment1">
-                  <input id="payment1" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/1.png" alt="" />
-                </label>
-                <label class="item" for="payment2">
-                  <input id="payment2" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/2.png" alt="" />
-                </label>
-                <label class="item" for="payment3">
-                  <input id="payment3" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/3.png" alt="" />
-                </label>
-                <label class="item" for="payment4">
-                  <input id="payment4" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/4.png" alt="" />
-                </label>
-                <label class="item" for="payment5">
-                  <input id="payment5" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/5.png" alt="" />
-                </label>
-                <label class="item" for="payment6">
-                  <input id="payment6" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/7.png" alt="" />
-                </label>
-                <label class="item" for="payment7">
-                  <input id="payment7" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/8.png" alt="" />
-                </label>
-                <label class="item" for="payment8">
-                  <input id="payment8" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/9.png" alt="" />
-                </label>
-                <label class="item" for="payment9">
-                  <input id="payment9" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/10.png" alt="" />
-                </label>
-                <label class="item" for="payment10">
-                  <input id="payment10" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/11.png" alt="" />
-                </label>
-                <label class="item" for="payment11">
-                  <input id="payment11" type="radio" name="pembayaran" />
-                  <img src="assets/img/payment/12.png" alt="" />
-                </label>
+    <section class="page cart-page" id="cart">
+      <div class="cart-container">
+
+      </div>
+      </section> 
+
+      <section class="more-product">
+        <div class="sub-container">
+          <h3 class="title-more">Produk Lainnya</h3>
+          <div class="product-content" id="product-recommendations">
+            <div class="list-product">
+              <div class="image-content">
+                <img src="assets/img/banner-home.png" />
+              </div>
+              <div class="description-product">
+                <span class="product-title"
+                  ><a href="#detail-product">Oner more Than</a></span
+                >
+                <div class="deskripsi-label">
+                  <span class="list-label">daikin</span>
+                  <span class="list-label">bekas</span>
+                </div>
+                <span class="price">Rp 100000</span>
+                <button class="btn-buy">Beli</button>
               </div>
             </div>
-            <div class="sparate">
-              <button class="cotinue-pay">Bayar</button>
-            </div>
-          </div>
-          <div class="order-details">
-            <h4>Rincian Barang</h4>
-            <div class="product-img">
-              <img data-co="thumbnail" src="/assets/img/banner-home.png" />
-              <div class="product-description">
-                <span data-co="produk">Daikin indoor 2pk</span>
-                <span data-co="price">Rp 2.500.000</span>
+
+            <div class="list-product">
+              <div class="image-content">
+                <img src="assets/img/banner-home.png" />
+              </div>
+              <div class="description-product">
+                <span class="product-title"
+                  ><a href="#detail-product">Oner more Than</a></span
+                >
+                <div class="deskripsi-label">
+                  <span class="list-label">daikin</span>
+                  <span class="list-label">bekas</span>
+                </div>
+                <span class="price">Rp 100000</span>
+                <button class="btn-buy">Beli</button>
               </div>
             </div>
-            <div class="dash"></div>
-            <table>
-              <tr>
-                <td>Biaya Pengirimian</td>
-                <td>Rp 150.000</td>
-              </tr>
-              <tr>
-                <td>Subtotal</td>
-                <td>Rp 2.650.000</td>
-              </tr>
-              <tr>
-                <td>Total</td>
-                <td>Rp 2.650.000</td>
-              </tr>
-            </table>
+
+            <div class="list-product">
+              <div class="image-content">
+                <img src="assets/img/banner-home.png" />
+              </div>
+              <div class="description-product">
+                <span class="product-title"
+                  ><a href="#detail-product">Oner more Than</a></span
+                >
+                <div class="deskripsi-label">
+                  <span class="list-label">daikin</span>
+                  <span class="list-label">bekas</span>
+                </div>
+                <span class="price">Rp 100000</span>
+                <button class="btn-buy">Beli</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="bg-payment">
-        <div class="payment-card">
-          <span>Pembayaran berakhir - 30:50</span>
-          <img src="assets/img/qr.png" />
-          <table>
-            <tr>
-              <td>Produk</td>
-              <td>Daikin indoor 2pk</td>
-            </tr>
-            <tr>
-              <td>Harga</td>
-              <td>Rp 2.500.000</td>
-            </tr>
-            <tr>
-              <td>Biaya Pengiriman</td>
-              <td>Rp 150.000</td>
-            </tr>
-            <tr>
-              <td>Biaya Admin</td>
-              <td>Rp 10.000</td>
-            </tr>
-            <tr>
-              <td>Subtotal</td>
-              <td>Rp 2.660.000</td>
-            </tr>
-            <tr>
-              <td>Total</td>
-              <td>Rp 2.660.000</td>
-            </tr>
-          </table>
-          <button data-btn="cancel-payment">Batalkan Pembayaran</button>
-        </div>
-      </div>
-      <div class="bg-succes-payment">
-        <div class="pop-up-card"></div>
-      </div>
+      </section>
     </div>
 
     <!-- ~~~~~~~~~ Footer ~~~~~~~~~~~ -->
@@ -357,16 +274,16 @@
         <div class="footer-mid">
           <ul class="footer-nav">
             <li>
-              <a href="\index.html#home">Home</a>
+              <a href="index.html#home">Home</a>
             </li>
             <li>
-              <a href="./layanan.html">Layanan</a>
+              <a href="layanan.html">Layanan</a>
             </li>
-            <li><a href="./galery.html">Galery</a></li>
+            <li><a href="galery.html">Galery</a></li>
             <li>
               <a href="kerja-sama.html">Kerja Sama</a>
             </li>
-            <li><a href="./kontak.html">Kontak</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
           </ul>
           <div class="footer-social">
             <a href="#facebook-account"
@@ -394,6 +311,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="assets/js/final.js"></script>
+    <!-- <script type="module" src="assets/js/final.js"></script> -->
   </body>
 </html>
